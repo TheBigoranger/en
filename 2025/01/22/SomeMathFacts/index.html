@@ -27,7 +27,7 @@
 <meta property="og:description" content="Math factsNormDefinition: For vector $x\in\mathbb{R}^n$, $p\in(0,\infty]$  \left\|x\right\|_p&#x3D;\left(     x_1^p+\cdots+x_n^p \right)^{\frac{1}{p}}.When $p\in[1,\infty]$, $|x|_p$ is a norm.    Theorem:">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-22T22:54:26.000Z">
-<meta property="article:modified_time" content="2025-01-23T08:30:44.632Z">
+<meta property="article:modified_time" content="2025-01-23T08:39:38.993Z">
 <meta property="article:author" content="bigoranger">
 <meta name="twitter:card" content="summary">
 
@@ -191,7 +191,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-01-23 00:30:44" itemprop="dateModified" datetime="2025-01-23T00:30:44-08:00">2025-01-23</time>
+      <time title="Modified: 2025-01-23 00:39:38" itemprop="dateModified" datetime="2025-01-23T00:39:38-08:00">2025-01-23</time>
     </span>
 
   
@@ -212,22 +212,12 @@
 <blockquote>
 <p><strong><em>Theorem:</em></strong> $\left|x\right|_p\leq |x|_q,\forall p\geq q&gt;0$.</p>
 </blockquote>
-<p><em>Proof:</em> Consider the auxiliary vectors $y=\frac{|x|}{\left|x\right|_q}$. Note that each entry of $y$ is less than 1:</p>
-<script type="math/tex; mode=display">
-y_k=\frac{|x_k|}{\left\|x\right\|_q}\leq 1\ 
-\Rightarrow y_k^p\geq y_k^q,\ \forall k=1,\cdots,n.</script><p>The following inequality holds for each entry:</p>
-<script type="math/tex; mode=display">
-\left\|y\right\|_p=\left(
-\sum_{k=1}^n y_k^p
-\right)^{\frac{1}{p}}\geq \left(
-    \sum_{k=1}^ny_k^q
-\right)^{\frac{1}{p}}=\left(
-\sum_{k=1}^n\frac{|x_k|^q}{\left\|x\right\|^q_q}
-\right)^{\frac{1}{p}}=1\\[2mm]
-\Rightarrow \quad \frac{\left\|x\right\|_p}{\left\|x\right\|_q}\geq 1.</script><div style="text-align: right">&#2200;</div>
+<p><em>Proof:</em> Consider the auxiliary vectors $y=\frac{|x|}{\left|x\right|_q}$. Note that each entry of $y$ is less than 1:<br>\begin{gather*}<br>y_k=\frac{|x_k|}{\left|x\right|_q}\leq 1\<br>\Rightarrow y_k^p\geq y_k^q,\ \forall k=1,\cdots,n.<br>\end{gather*}<br>The following inequality holds for each entry:</p>
+<p>\begin{gather*}<br>\left|y\right|<em>p=\left(<br>\sum</em>{k=1}^n y<em>k^p<br>\right)^{\frac{1}{p}}\geq \left(<br>    \sum</em>{k=1}^ny<em>k^q<br>\right)^{\frac{1}{p}}=\left(<br>\sum</em>{k=1}^n\frac{|x_k|^q}{\left|x\right|^q_q}<br>\right)^{\frac{1}{p}}=1\[2mm]<br>\Rightarrow \quad \frac{\left|x\right|_p}{\left|x\right|_q}\geq 1.<br>\end{gather*}</p>
+<div style="text-align: right">&#2200;</div>
 
 <hr>
-<h1 id="Control-Theory"><a href="#Control-Theory" class="headerlink" title="Control Theory"></a>Control Theory</h1><h2 id="Stability"><a href="#Stability" class="headerlink" title="Stability"></a>Stability</h2><p><strong>Definition</strong> A square matrix $A\in\mathbb{R}^{n\times n}$ is <span style="color:blue">Hurwitz-stable</span> iff. $Re[\lambda_i(A)]&lt;0,\forall i=1,\cdots,n$.</p>
+<h1 id="Control-Theory"><a href="#Control-Theory" class="headerlink" title="Control Theory"></a>Control Theory</h1><h2 id="Stability"><a href="#Stability" class="headerlink" title="Stability"></a>Stability</h2><p><strong>Definition:</strong> A square matrix $A\in\mathbb{R}^{n\times n}$ is <span style="color:blue">Hurwitz-stable</span> iff.<br>\begin{gather*}<br>Re[\lambda_i(A)]&lt;0,\ \forall i=1,\cdots,n<br>\end{gather*}</p>
 <hr>
 <blockquote>
 <p><strong><em>Theorem(Lyapunov Stability):</em></strong> $A\in\mathbb{R}^{n\times n}$ is Hurwitz-stable iff. there exists $P\succ 0$ such that<br>\begin{gather}<br>PA+A^TP\prec 0.<br>\end{gather}</p>
