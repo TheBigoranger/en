@@ -47,7 +47,11 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -118,7 +122,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -145,7 +149,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.ethanyxu.com/2021/06/10/%E4%B8%80%E4%B8%AA%E8%87%AA%E7%94%A8%E7%9A%84-vimrc%E6%A8%A1%E6%9D%BF/">
+    <link itemprop="mainEntityOfPage" href="https://blog.ethanyxu.com/2025/01/22/SomeMathFacts/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +167,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/10/%E4%B8%80%E4%B8%AA%E8%87%AA%E7%94%A8%E7%9A%84-vimrc%E6%A8%A1%E6%9D%BF/" class="post-title-link" itemprop="url">一个自用的.vimrc模板</a>
+          <a href="/2025/01/22/SomeMathFacts/" class="post-title-link" itemprop="url">SomeMathFacts</a>
         </h2>
 
         <div class="post-meta-container">
@@ -174,14 +178,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-06-10 04:49:51" itemprop="dateCreated datePublished" datetime="2021-06-10T04:49:51-07:00">2021-06-10</time>
+      <time title="Created: 2025-01-22 14:54:26" itemprop="dateCreated datePublished" datetime="2025-01-22T14:54:26-08:00">2025-01-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-01-22 12:16:25" itemprop="dateModified" datetime="2025-01-22T12:16:25-08:00">2025-01-22</time>
+      <time title="Modified: 2025-01-23 00:20:31" itemprop="dateModified" datetime="2025-01-23T00:20:31-08:00">2025-01-23</time>
     </span>
 
   
@@ -194,98 +198,39 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>分享一个自用的.vimrc模板，需要配合Vundle使用。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/10/%E4%B8%80%E4%B8%AA%E8%87%AA%E7%94%A8%E7%9A%84-vimrc%E6%A8%A1%E6%9D%BF/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
+          <h1 id="Math-facts"><a href="#Math-facts" class="headerlink" title="Math facts"></a>Math facts</h1><h2 id="Norm"><a href="#Norm" class="headerlink" title="Norm"></a>Norm</h2><p><strong>Definition:</strong> For vector $x\in\mathbb{R}^n$, $p\in(0,\infty]$</p>
+<script type="math/tex; mode=display">
+\left\|x\right\|_p=\left(
+    x_1^p+\cdots+x_n^p
+\right)^{\frac{1}{p}}.</script><p>When $p\in[1,\infty]$, $|x|_p$ is a norm. </p>
+<hr>
+<blockquote>
+<p><strong><em>Theorem:</em></strong> $\left|x\right|_p\leq |x|_q,\forall p\geq q&gt;0$.</p>
+</blockquote>
+<p><em>Proof:</em> Consider the auxiliary vectors $y=\frac{|x|}{\left|x\right|_q}$. Note that each entry of $y$ is less than 1:</p>
+<script type="math/tex; mode=display">
+y_k=\frac{|x_k|}{\left\|x\right\|_q}\leq 1\ 
+\Rightarrow y_k^p\geq y_k^q,\ \forall k=1,\cdots,n.</script><p>The following inequality holds for each entry:</p>
+<script type="math/tex; mode=display">
+\left\|y\right\|_p=\left(
+\sum_{k=1}^n y_k^p
+\right)^{\frac{1}{p}}\geq \left(
+    \sum_{k=1}^ny_k^q
+\right)^{\frac{1}{p}}=\left(
+\sum_{k=1}^n\frac{|x_k|^q}{\left\|x\right\|^q_q}
+\right)^{\frac{1}{p}}=1\\[2mm]
+\Rightarrow \quad \frac{\left\|x\right\|_p}{\left\|x\right\|_q}\geq 1.</script><div style="text-align: right">&#2200;</div>
 
-    
-    
-    
+<hr>
+<!-- <a name="pookie"></a> -->
+<!-- \begin{equation}
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+  \label{eq:sample}
+\end{equation}
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.ethanyxu.com/2019/08/08/wndr4300%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%92%8C%E5%88%B7%E5%9B%9E%E5%8E%9F%E5%8E%82%E5%9B%BA%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="bigoranger">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="bigoranger's blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | bigoranger's blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/08/08/wndr4300%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%92%8C%E5%88%B7%E5%9B%9E%E5%8E%9F%E5%8E%82%E5%9B%BA%E4%BB%B6/" class="post-title-link" itemprop="url">wndr4300路由器刷第三方固件和刷回原厂固件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-08-08 07:16:47" itemprop="dateCreated datePublished" datetime="2019-08-08T07:16:47-07:00">2019-08-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-01-22 12:16:25" itemprop="dateModified" datetime="2025-01-22T12:16:25-08:00">2025-01-22</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&emsp;&emsp;先给出结论：wndr4300路由器刷第三方固件拓展可玩性是可行的，但自由度的扩大带来的是系统部分性能的损失以及复杂的调试工作，刷入第三方固件，哪怕是官方第三方固件，都没有办法轻易通过可视化交互方式轻松刷回原厂固件，希望在刷之前三思。我刷了固件之后经过一番调试成功使用OpenWrt的官方固件达到了流量转发和无线wifi的功能。但是由于第三方固件的原因，穿墙能力以及带宽限制导致网速和稍远的连接不稳定，所以在家人的要求下，最后又刷回了原厂固件。这是一篇关于我折腾wndr4300路由器的博客，希望能对你有所帮助。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/08/08/wndr4300%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%92%8C%E5%88%B7%E5%9B%9E%E5%8E%9F%E5%8E%82%E5%9B%BA%E4%BB%B6/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+\eqref{eq:sample}
+Take me to [pookie](#pookie) -->
+<!-- See (\ref{1}) -->
       
     </div>
 
@@ -355,6 +300,12 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 
