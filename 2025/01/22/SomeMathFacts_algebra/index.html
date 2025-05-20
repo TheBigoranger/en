@@ -20,15 +20,15 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.ethanyxu.com","root":"/en/","images":"/en/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/en/js/config.js"></script>
 
 
-    <meta name="description" content="1. Math facts1.1. NormDefinition: For vector $x\in\mathbb{R}^n$, $p\in(0,\infty]$  \left\|x\right\|_p&#x3D;\left(     x_1^p+\cdots+x_n^p \right)^{\frac{1}{p}}.When $p\in[1,\infty]$, $|x|_p$ is a norm.    T">
+    <meta name="description" content="1. NormDefinition: For vector $x\in\mathbb{R}^n$, $p\in(0,\infty]$ \begin{gather*}||x||_p&#x3D;\left(    x_1^p+\cdots+x_n^p\right)^{\frac{1}{p}}.\end{gather*} When $p\in[1,\infty]$, $||x||_p$ is a norm.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SomeMathFacts">
+<meta property="og:title" content="Some Math Facts on Linear Algebra and Optimization">
 <meta property="og:url" content="https://blog.ethanyxu.com/en/2025/01/22/SomeMathFacts_algebra/index.html">
 <meta property="og:site_name" content="bigoranger&#39;s blog">
-<meta property="og:description" content="1. Math facts1.1. NormDefinition: For vector $x\in\mathbb{R}^n$, $p\in(0,\infty]$  \left\|x\right\|_p&#x3D;\left(     x_1^p+\cdots+x_n^p \right)^{\frac{1}{p}}.When $p\in[1,\infty]$, $|x|_p$ is a norm.    T">
+<meta property="og:description" content="1. NormDefinition: For vector $x\in\mathbb{R}^n$, $p\in(0,\infty]$ \begin{gather*}||x||_p&#x3D;\left(    x_1^p+\cdots+x_n^p\right)^{\frac{1}{p}}.\end{gather*} When $p\in[1,\infty]$, $||x||_p$ is a norm.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-22T22:54:26.000Z">
-<meta property="article:modified_time" content="2025-05-20T17:55:33.899Z">
+<meta property="article:modified_time" content="2025-05-20T18:18:53.671Z">
 <meta property="article:author" content="bigoranger">
 <meta name="twitter:card" content="summary">
 
@@ -36,10 +36,10 @@
 <link rel="canonical" href="https://blog.ethanyxu.com/en/2025/01/22/SomeMathFacts_algebra/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.ethanyxu.com/en/2025/01/22/SomeMathFacts_algebra/","path":"2025/01/22/SomeMathFacts_algebra/","title":"SomeMathFacts"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://blog.ethanyxu.com/en/2025/01/22/SomeMathFacts_algebra/","path":"2025/01/22/SomeMathFacts_algebra/","title":"Some Math Facts on Linear Algebra and Optimization"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>SomeMathFacts | bigoranger's blog</title>
+<title>Some Math Facts on Linear Algebra and Optimization | bigoranger's blog</title>
   
 
 
@@ -115,7 +115,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Math-facts"><span class="nav-text">1. Math facts</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Norm"><span class="nav-text">1.1. Norm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Positive-Definite-Matrix"><span class="nav-text">1.2. Positive Definite Matrix</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Norm"><span class="nav-text">1. Norm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Positive-Definite-Matrix"><span class="nav-text">2. Positive Definite Matrix</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -169,12 +169,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="SomeMathFacts | bigoranger's blog">
+      <meta itemprop="name" content="Some Math Facts on Linear Algebra and Optimization | bigoranger's blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          SomeMathFacts
+          Some Math Facts on Linear Algebra and Optimization
         </h1>
 
         <div class="post-meta-container">
@@ -192,7 +192,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-05-20 10:55:33" itemprop="dateModified" datetime="2025-05-20T10:55:33-07:00">2025-05-20</time>
+      <time title="Modified: 2025-05-20 11:18:53" itemprop="dateModified" datetime="2025-05-20T11:18:53-07:00">2025-05-20</time>
     </span>
 
   
@@ -204,11 +204,9 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="Math-facts">1. Math facts</h1><h2 id="Norm">1.1. Norm</h2><p><strong>Definition:</strong> For vector $x\in\mathbb{R}^n$, $p\in(0,\infty]$</p>
-<script type="math/tex; mode=display">
-\left\|x\right\|_p=\left(
-    x_1^p+\cdots+x_n^p
-\right)^{\frac{1}{p}}.</script><p>When $p\in[1,\infty]$, $|x|_p$ is a norm. </p>
+    <div class="post-body" itemprop="articleBody"><h1 id="Norm">1. Norm</h1><p><strong>Definition:</strong> For vector $x\in\mathbb{R}^n$, $p\in(0,\infty]$</p>
+<p>\begin{gather*}<br>||x||_p=\left(<br>    x_1^p+\cdots+x_n^p<br>\right)^{\frac{1}{p}}.<br>\end{gather*}</p>
+<p>When $p\in[1,\infty]$, $||x||_p$ is a norm. </p>
 <hr>
 <blockquote>
 <p><strong><em>Theorem:</em></strong> <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.65ex;" xmlns="http://www.w3.org/2000/svg" width="23.654ex" height="2.347ex" role="img" focusable="false" viewbox="0 -750 10455.3 1037.2" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-TEX-N-2016" d="M133 736Q138 750 153 750Q164 750 170 739Q172 735 172 250T170 -239Q164 -250 152 -250Q144 -250 138 -244L137 -243Q133 -241 133 -179T132 250Q132 731 133 736ZM329 739Q334 750 346 750Q353 750 361 744L362 743Q366 741 366 679T367 250T367 -178T362 -243L361 -244Q355 -250 347 -250Q335 -250 329 -239Q327 -235 327 250T329 739Z"/><path id="MJX-2-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"/><path id="MJX-2-TEX-I-1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"/><path id="MJX-2-TEX-N-2264" d="M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"/><path id="MJX-2-TEX-I-1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"/><path id="MJX-2-TEX-N-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"/><path id="MJX-2-TEX-N-2200" d="M0 673Q0 684 7 689T20 694Q32 694 38 680T82 567L126 451H430L473 566Q483 593 494 622T512 668T519 685Q524 694 538 694Q556 692 556 674Q556 670 426 329T293 -15Q288 -22 278 -22T263 -15Q260 -11 131 328T0 673ZM414 410Q414 411 278 411T142 410L278 55L414 410Z"/><path id="MJX-2-TEX-N-2265" d="M83 616Q83 624 89 630T99 636Q107 636 253 568T543 431T687 361Q694 356 694 346T687 331Q685 329 395 192L107 56H101Q83 58 83 76Q83 77 83 79Q82 86 98 95Q117 105 248 167Q326 204 378 228L626 346L360 472Q291 505 200 548Q112 589 98 597T83 616ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"/><path id="MJX-2-TEX-N-3E" d="M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z"/><path id="MJX-2-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"/></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="2016" xlink:href="#MJX-2-TEX-N-2016"/></g><g data-mml-node="mi" transform="translate(500,0)"><use data-c="1D465" xlink:href="#MJX-2-TEX-I-1D465"/></g><g data-mml-node="msub" transform="translate(1072,0)"><g data-mml-node="mo"><use data-c="2016" xlink:href="#MJX-2-TEX-N-2016"/></g><g data-mml-node="mi" transform="translate(533,-150) scale(0.707)"><use data-c="1D45D" xlink:href="#MJX-2-TEX-I-1D45D"/></g></g><g data-mml-node="mo" transform="translate(2288.5,0)"><use data-c="2264" xlink:href="#MJX-2-TEX-N-2264"/></g><g data-mml-node="mo" transform="translate(3344.2,0)"><use data-c="2016" xlink:href="#MJX-2-TEX-N-2016"/></g><g data-mml-node="mi" transform="translate(3844.2,0)"><use data-c="1D465" xlink:href="#MJX-2-TEX-I-1D465"/></g><g data-mml-node="msub" transform="translate(4416.2,0)"><g data-mml-node="mo"><use data-c="2016" xlink:href="#MJX-2-TEX-N-2016"/></g><g data-mml-node="mi" transform="translate(533,-150) scale(0.707)"><use data-c="1D45E" xlink:href="#MJX-2-TEX-I-1D45E"/></g></g><g data-mml-node="mo" transform="translate(5324.5,0)"><use data-c="2C" xlink:href="#MJX-2-TEX-N-2C"/></g><g data-mml-node="mi" transform="translate(5769.2,0)"><use data-c="2200" xlink:href="#MJX-2-TEX-N-2200"/></g><g data-mml-node="mi" transform="translate(6325.2,0)"><use data-c="1D45D" xlink:href="#MJX-2-TEX-I-1D45D"/></g><g data-mml-node="mo" transform="translate(7105.9,0)"><use data-c="2265" xlink:href="#MJX-2-TEX-N-2265"/></g><g data-mml-node="mi" transform="translate(8161.7,0)"><use data-c="1D45E" xlink:href="#MJX-2-TEX-I-1D45E"/></g><g data-mml-node="mo" transform="translate(8899.5,0)"><use data-c="3E" xlink:href="#MJX-2-TEX-N-3E"/></g><g data-mml-node="mn" transform="translate(9955.3,0)"><use data-c="30" xlink:href="#MJX-2-TEX-N-30"/></g></g></g></svg></mjx-container>.</p>
@@ -229,7 +227,7 @@ The following inequality holds for each entry:
 </details>
 
 <hr>
-<h2 id="Positive-Definite-Matrix">1.2. Positive Definite Matrix</h2><blockquote>
+<h1 id="Positive-Definite-Matrix">2. Positive Definite Matrix</h1><blockquote>
 <p><strong><em>Lemma:</em></strong> Given $A\succeq 0,B\succeq 0$, $AB=0$ iff. $tr(AB)=0$.</p>
 </blockquote>
 <details closed>
