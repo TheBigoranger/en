@@ -28,7 +28,7 @@
 <meta property="og:description" content="1. Stability1.1. Continuous-time StabilityDefinition: A square matrix $A\in\mathbb{R}^{n\times n}$ is Hurwitz-stable iff.\begin{gather*}Re[\lambda_i(A)]&lt;0,\ \forall i&#x3D;1,\cdots,n\end{gather*}   Theo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-22T22:54:26.000Z">
-<meta property="article:modified_time" content="2025-05-21T00:22:06.245Z">
+<meta property="article:modified_time" content="2025-05-21T03:32:27.137Z">
 <meta property="article:author" content="bigoranger">
 <meta name="twitter:card" content="summary">
 
@@ -192,7 +192,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-05-20 17:22:06" itemprop="dateModified" datetime="2025-05-20T17:22:06-07:00">2025-05-20</time>
+      <time title="Modified: 2025-05-20 20:32:27" itemprop="dateModified" datetime="2025-05-20T20:32:27-07:00">2025-05-20</time>
     </span>
 
   
@@ -206,9 +206,14 @@
     
     <div class="post-body" itemprop="articleBody"><h1 id="Stability">1. Stability</h1><h2 id="Continuous-time-Stability">1.1. Continuous-time Stability</h2><p><strong>Definition:</strong> A square matrix $A\in\mathbb{R}^{n\times n}$ is <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Hurwitz-stable_matrix" style="color:DodgerBlue">Hurwitz-stable</a> iff.<br>\begin{gather*}<br>Re[\lambda_i(A)]&lt;0,\ \forall i=1,\cdots,n<br>\end{gather*}</p>
 <hr>
-<blockquote>
-<p><strong><em>Theorem(Lyapunov Stability):</em></strong> $A\in\mathbb{R}^{n\times n}$ is Hurwitz-stable iff. there exists $P\succ 0$ such that<br>\begin{gather}<br>PA+A^TP\prec 0.<br>\label{eq:continuous-time Lyapunov inequality}<br>\end{gather}</p>
-</blockquote>
+<fieldset>
+<strong><i>Theorem(Lyapunov Stability)</i></strong>: $A\in\mathbb{R}^{n\times n}$ is Hurwitz-stable iff. there exists $P\succ 0$ such that 
+\begin{gather}
+PA+A^TP\prec 0.
+\label{eq:continuous-time Lyapunov inequality}
+\end{gather}
+</fieldset>
+
 <p>This Theorem was originated from control theory. I would like to present an <span style="color:red">algebra view-point</span>.</p>
 <details open>
 <summary><strong>Proof of the Theorem</strong></summary>
@@ -362,9 +367,15 @@ By selecting odd rows and columns and even rows and columns, one can find it get
 <span id="more"></span>
 <hr>
 <p><span display="inline">\eqref{eq:continuous-time Lyapunov inequality}</span> requires to solve a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linear_matrix_inequality" style="color:DodgerBlue">LMI</a>. Even though it can be done with modern <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Semidefinite_programming" style="color:DodgerBlue"> SDP</a> solver. There is a result that only requires to solve a linear (Lyapunov) equation.</p>
-<blockquote>
-<p><strong><em>Theorem(Lyapunov equation):</em></strong> $A\in\mathbb{R}^{n\times n}$ is Hurwitz-stable iff. for <span style="color:red">any </span> $Q\succ0$ there exists $P\succ 0$ such that<br>\begin{gather}<br>PA+A^TP+Q=0.<br>\label{eq:continuous-time Lyapunov equation}<br>\end{gather}</p>
-</blockquote>
+<fieldset>
+<strong><i>Theorem(Lyapunov equation):</i></strong> $A\in\mathbb{R}^{n\times n}$ is Hurwitz-stable iff. for <span style="color:red">any </span> $Q\succ0$ there exists $P\succ 0$ such that 
+\begin{gather}
+PA+A^TP+Q=0.
+\label{eq:continuous-time Lyapunov equation}
+\end{gather}
+</fieldset>
+
+
 <p>The proof is to construct such $P$ given $Q$.</p>
 <details open>
 <summary><strong>Proof of the Theorem</strong></summary>
@@ -402,9 +413,14 @@ A^TP+PA&=\displaystyle \int_0^\infty Ae^{A\tau}Qe^{A^T\tau}+e^{A\tau}Qe^{A^T\tau
 <hr>
 <h2 id="Discrete-time-Stability">1.2. Discrete-time Stability</h2><p><strong>Definition:</strong> A square matrix $A\in\mathbb{R}^{n\times n}$ is <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Schur-stable_matrix" style="color:DodgerBlue">Schur-stable</a> iff.<br>\begin{gather*}<br>|\lambda_i(A)|&lt;1,\ \forall i=1,\cdots,n.<br>\end{gather*}</p>
 <hr>
-<blockquote>
-<p><strong><em>Theorem(Lyapunov Stability):</em></strong> $A\in\mathbb{R}^{n\times n}$ is Schur-stable iff. there exists $P\succ 0$ such that<br>\begin{gather}<br>P-A^TPA\succ 0.<br>\label{eq:discrete-time Lyapunov inequality}<br>\end{gather}</p>
-</blockquote>
+<fieldset>
+<strong><i>Theorem(Lyapunov Stability):</i></strong> $A\in\mathbb{R}^{n\times n}$ is Schur-stable iff. there exists $P\succ 0$ such that 
+\begin{gather}
+P-A^TPA\succ 0.
+\label{eq:discrete-time Lyapunov inequality}
+\end{gather}
+</fieldset>
+
 <p>Similarly, the <span style="color:red">algebra view-point</span> is provided.</p>
 <details open>
 <summary><strong>Proof of the Theorem</strong></summary>
@@ -505,9 +521,14 @@ for some $\alpha>0$, in which such $\hat{p}_1$ always exists such that $\hat{p}_
 
 <hr>
 <p>Similarly, <span display="inline">\eqref{eq:discrete-time Lyapunov inequality}</span> requires to solve a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linear_matrix_inequality" style="color:DodgerBlue">LMI</a>. Even though it can be done with modern <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Semidefinite_programming" style="color:DodgerBlue"> SDP</a> solver, there is a result that only requires to solve a linear (Lyapunov) equation.</p>
-<blockquote>
-<p><strong><em>Theorem(Lyapunov equation):</em></strong> $A\in\mathbb{R}^{n\times n}$ is Schur-stable iff. for any $Q\succ0$ there exists $P\succ 0$ such that<br>\begin{gather}<br>P-A^TPA=Q.<br>\label{eq:discrete-time Lyapunov equation}<br>\end{gather}</p>
-</blockquote>
+<fieldset>
+<strong><i>Theorem(Lyapunov equation):</i></strong> $A\in\mathbb{R}^{n\times n}$ is Schur-stable iff. for any $Q\succ0$ there exists $P\succ 0$ such that 
+\begin{gather}
+P-A^TPA=Q.
+\label{eq:discrete-time Lyapunov equation}
+\end{gather}
+</fieldset>
+
 <p>The proof is to construct such $P$ given $Q$.</p>
 <details open>
 <summary><strong>Proof of the Theorem</strong></summary>
@@ -535,9 +556,10 @@ P-A^TPA&=\displaystyle \sum_{k=0}^\infty (A^{T})^kQA^k-\sum_{k=0}^\infty (A^{T})
 
 <hr>
 <h2 id="Relation-between-Continuous-time-and-Discrete-time-Stability">1.3. Relation between Continuous-time and Discrete-time Stability</h2><p>While the proof for the theorems are very technical, but if one knows discrete-time version, the continuous-time version can be deduced easily. The other way around is a little hard to show, but there are some relations.</p>
-<blockquote>
-<p><a style="color:red"> Discrete-time inequality <span display="inline">\eqref{eq:discrete-time Lyapunov inequality}</span> $\Rightarrow$ Continous-time inequality <span display="inline">\eqref{eq:continuous-time Lyapunov inequality} </span> </a></p>
-</blockquote>
+<fieldset align="center">
+<strong><i><a style="color:red"> Discrete-time inequality <span display="inline">\eqref{eq:discrete-time Lyapunov inequality}</span> $\Rightarrow$ Continous-time inequality <span display="inline">\eqref{eq:continuous-time Lyapunov inequality} </span> </a> </i></strong>
+</fieldset>
+
 <p>Suppose we already knows <span display="inline">\eqref{eq:discrete-time Lyapunov inequality}</span> holds iff. $A$ is <a href="#Discrete-time-Stability">Schur stable</a>. Then for a given matrix $B\in\mathbb{R}^{n\times n}$, we would like to find that $B$ is <a href="#Continuous-time-Stability">Hurwitz stable</a> iff. the condition <span display="inline">\eqref{eq:continuous-time Lyapunov inequality} </span> holds. </p>
 <details closed>
 
@@ -584,7 +606,7 @@ The notation $o(t)$ stands for the matrix term that is of higher order of $t$, e
 <summary style="padding-left: 20px"><strong style="color:RoyalBlue">Use Euler Approximation</strong></summary>
 A simliar idea can be find using the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Euler_method" style="color:DodgerBlue">Euler method</a>, instead of using matrix exponential $e^{Bt}$, we use 
 <p align="center">
-<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="7.069ex" height="1.731ex" role="img" focusable="false" viewbox="0 -683 3124.4 765" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-TEX-I-1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"/><path id="MJX-2-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"/><path id="MJX-2-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"/><path id="MJX-2-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"/><path id="MJX-2-TEX-N-2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"/></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D43C" xlink:href="#MJX-2-TEX-I-1D43C"/></g><g data-mml-node="mo" transform="translate(726.2,0)"><use data-c="2B" xlink:href="#MJX-2-TEX-N-2B"/></g><g data-mml-node="mi" transform="translate(1726.4,0)"><use data-c="1D461" xlink:href="#MJX-2-TEX-I-1D461"/></g><g data-mml-node="mi" transform="translate(2087.4,0)"><use data-c="1D435" xlink:href="#MJX-2-TEX-I-1D435"/></g><g data-mml-node="mo" transform="translate(2846.4,0)"><use data-c="2E" xlink:href="#MJX-2-TEX-N-2E"/></g></g></g></svg></mjx-container>
+<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="7.069ex" height="1.731ex" role="img" focusable="false" viewbox="0 -683 3124.4 765" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"/><path id="MJX-1-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"/><path id="MJX-1-TEX-I-1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"/><path id="MJX-1-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"/><path id="MJX-1-TEX-N-2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"/></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D43C" xlink:href="#MJX-1-TEX-I-1D43C"/></g><g data-mml-node="mo" transform="translate(726.2,0)"><use data-c="2B" xlink:href="#MJX-1-TEX-N-2B"/></g><g data-mml-node="mi" transform="translate(1726.4,0)"><use data-c="1D461" xlink:href="#MJX-1-TEX-I-1D461"/></g><g data-mml-node="mi" transform="translate(2087.4,0)"><use data-c="1D435" xlink:href="#MJX-1-TEX-I-1D435"/></g><g data-mml-node="mo" transform="translate(2846.4,0)"><use data-c="2E" xlink:href="#MJX-1-TEX-N-2E"/></g></g></g></svg></mjx-container>
 </p>
 
 The detail has been addressed in <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Lyapunov_equation#Relationship_Between_Discrete_and_Continuous_Lyapunov_Equations" style="color:DodgerBlue">the subsection of Lyapunov equation</a>. So I won't repeat here.
@@ -620,10 +642,10 @@ which is \eqref{eq:continuous-time Lyapunov inequality}.
 
 
 
+<fieldset align="center">
+<strong><i><a style="color:red"> Continous-time inequality <span display="inline">\eqref{eq:continuous-time Lyapunov inequality} </span>$\Rightarrow$ Discrete-time inequality <span display="inline">\eqref{eq:discrete-time Lyapunov inequality} </span></a> </i></strong>
+</fieldset>
 
-<blockquote>
-<p><a style="color:red"> Continous-time inequality <span display="inline">\eqref{eq:continuous-time Lyapunov inequality} </span>$\Rightarrow$ Discrete-time inequality <span display="inline">\eqref{eq:discrete-time Lyapunov inequality} </span></a></p>
-</blockquote>
 <p>Suppose we already knows <span display="inline">\eqref{eq:continuous-time Lyapunov inequality}</span> holds iff. $A$ is <a href="#Continuous-time-Stability">Hurwitz stable</a>. Then for a given matrix $B\in\mathbb{R}^{n\times n}$, we would like to deduce that $B$ is <a href="#Discrete-time-Stability">Schur stable</a> iff. the condition <span display="inline">\eqref{eq:discrete-time Lyapunov inequality} </span> holds. </p>
 <details closed>
 <summary style="padding-left: 20px"><strong style="color:RoyalBlue">Logarithm of a matrix</strong></summary>
