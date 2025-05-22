@@ -28,7 +28,7 @@
 <meta property="og:description" content="1. NormDefinition: For vector $x\in\mathbb{R}^n$, $p\in(0,\infty]$ \begin{gather*}||x||_p&#x3D;\left(    x_1^p+\cdots+x_n^p\right)^{\frac{1}{p}}.\end{gather*} When $p\in[1,\infty]$, $||x||_p$ is a norm.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-22T22:54:26.000Z">
-<meta property="article:modified_time" content="2025-05-21T03:32:27.059Z">
+<meta property="article:modified_time" content="2025-05-22T21:54:28.871Z">
 <meta property="article:author" content="bigoranger">
 <meta name="twitter:card" content="summary">
 
@@ -115,7 +115,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Norm"><span class="nav-text">1. Norm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Positive-Definite-Matrix"><span class="nav-text">2. Positive Definite Matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-Matrix-Inequality-LMI-and-SemiDefinite-Programming-SDP"><span class="nav-text">2.1. Linear Matrix Inequality(LMI) and SemiDefinite Programming(SDP)</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Norm"><span class="nav-text">1. Norm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cone"><span class="nav-text">2. Cone</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Positive-Definite-Matrix"><span class="nav-text">3. Positive Definite Matrix</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-Matrix-Inequality-LMI-and-SemiDefinite-Programming-SDP"><span class="nav-text">3.1. Linear Matrix Inequality(LMI) and SemiDefinite Programming(SDP)</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -192,7 +192,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-05-20 20:32:27" itemprop="dateModified" datetime="2025-05-20T20:32:27-07:00">2025-05-20</time>
+      <time title="Modified: 2025-05-22 14:54:28" itemprop="dateModified" datetime="2025-05-22T14:54:28-07:00">2025-05-22</time>
     </span>
 
   
@@ -228,7 +228,28 @@ The following inequality holds for each entry:
 </details>
 
 <hr>
-<h1 id="Positive-Definite-Matrix">2. Positive Definite Matrix</h1><fieldset>
+<h1 id="Cone">2. Cone</h1><p><strong>Definition:</strong> A set $\mathcal{K}$ is called <span style="color:red"> cone </span> if for all $x\in \mathcal{K},\theta\geq 0$, it holds that<br>\begin{gather*}<br>    \theta x\in \mathcal{K}<br>\end{gather*}</p>
+<p><strong>Definition:</strong> Let $\mathcal{K}$ be a cone, the <span style="color:red">dual cone $\mathcal{K}^*$</span> is<br>\begin{gather*}<br>   \mathcal{K}^*:= \left\{y\mid x^Ty\geq 0, \forall x\in\mathcal{K}\right\}<br>\end{gather*}</p>
+<fieldset>
+<strong><i>
+Lemma:
+</i> If $\mathcal{K}$ is convex and closed, then $\mathcal{K}^{**}=\mathcal{K}$.
+</strong>
+</fieldset>
+
+<details closed>
+<summary>Proof</summary>
+Just use the definition, it is easy to verify that $\mathcal{K}\subseteq \mathcal{K}^{**}$. To show that they are actually the same set. Suppose there exists $x\in\mathcal{K}^{**},x\notin \mathcal{K}$. By <a href="<a href=" https: en.wikipedia.org wiki cholesky_decomposition" style="color:DodgerBlue"> Hyperplane separation theorem</a>, there exists $c$ such that
+\begin{gather*}
+\mathcal{K}\subseteq H^+=\left\{z\mid c^Tz\geq 0\right\},\\
+c^Tx < 0.
+\end{gather*}
+
+From the first relation, it holds that $c\in \mathcal{K}^*$. However, the second relation indicates that such $x\notin \mathcal{K}^{**}$ which contradicts the assumption. Therefore $\mathcal{K}^{**}=\mathcal{K}$. 
+</details>
+
+
+<h1 id="Positive-Definite-Matrix">3. Positive Definite Matrix</h1><fieldset>
 <strong><i>Lemma:</i></strong> Given $A\succeq 0,B\succeq 0$, $AB=0$ iff. $tr(AB)=0$.
 </fieldset>
 
@@ -245,7 +266,7 @@ tr(AB)=tr(PP^TQQ^T)=tr(Q^TPP^TQ)=tr(P^TQ)^2=\|P^TQ\|_F^2=0\\
 
 </details>
 
-<h2 id="Linear-Matrix-Inequality-LMI-and-SemiDefinite-Programming-SDP">2.1. Linear Matrix Inequality(LMI) and SemiDefinite Programming(SDP)</h2>
+<h2 id="Linear-Matrix-Inequality-LMI-and-SemiDefinite-Programming-SDP">3.1. Linear Matrix Inequality(LMI) and SemiDefinite Programming(SDP)</h2>
     </div>
 
     

@@ -274,7 +274,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-05-20 20:32:27" itemprop="dateModified" datetime="2025-05-20T20:32:27-07:00">2025-05-20</time>
+      <time title="Modified: 2025-05-22 14:54:28" itemprop="dateModified" datetime="2025-05-22T14:54:28-07:00">2025-05-22</time>
     </span>
 
   
@@ -311,7 +311,28 @@ The following inequality holds for each entry:
 </details>
 
 <hr>
-<h1 id="Positive-Definite-Matrix">2. Positive Definite Matrix</h1><fieldset>
+<h1 id="Cone">2. Cone</h1><p><strong>Definition:</strong> A set $\mathcal{K}$ is called <span style="color:red"> cone </span> if for all $x\in \mathcal{K},\theta\geq 0$, it holds that<br>\begin{gather*}<br>    \theta x\in \mathcal{K}<br>\end{gather*}</p>
+<p><strong>Definition:</strong> Let $\mathcal{K}$ be a cone, the <span style="color:red">dual cone $\mathcal{K}^*$</span> is<br>\begin{gather*}<br>   \mathcal{K}^*:= \left\{y\mid x^Ty\geq 0, \forall x\in\mathcal{K}\right\}<br>\end{gather*}</p>
+<fieldset>
+<strong><i>
+Lemma:
+</i> If $\mathcal{K}$ is convex and closed, then $\mathcal{K}^{**}=\mathcal{K}$.
+</strong>
+</fieldset>
+
+<details closed>
+<summary>Proof</summary>
+Just use the definition, it is easy to verify that $\mathcal{K}\subseteq \mathcal{K}^{**}$. To show that they are actually the same set. Suppose there exists $x\in\mathcal{K}^{**},x\notin \mathcal{K}$. By <a href="<a href=" https: en.wikipedia.org wiki cholesky_decomposition" style="color:DodgerBlue"> Hyperplane separation theorem</a>, there exists $c$ such that
+\begin{gather*}
+\mathcal{K}\subseteq H^+=\left\{z\mid c^Tz\geq 0\right\},\\
+c^Tx < 0.
+\end{gather*}
+
+From the first relation, it holds that $c\in \mathcal{K}^*$. However, the second relation indicates that such $x\notin \mathcal{K}^{**}$ which contradicts the assumption. Therefore $\mathcal{K}^{**}=\mathcal{K}$. 
+</details>
+
+
+<h1 id="Positive-Definite-Matrix">3. Positive Definite Matrix</h1><fieldset>
 <strong><i>Lemma:</i></strong> Given $A\succeq 0,B\succeq 0$, $AB=0$ iff. $tr(AB)=0$.
 </fieldset>
 
@@ -328,7 +349,7 @@ tr(AB)=tr(PP^TQQ^T)=tr(Q^TPP^TQ)=tr(P^TQ)^2=\|P^TQ\|_F^2=0\\
 
 </details>
 
-<h2 id="Linear-Matrix-Inequality-LMI-and-SemiDefinite-Programming-SDP">2.1. Linear Matrix Inequality(LMI) and SemiDefinite Programming(SDP)</h2>
+<h2 id="Linear-Matrix-Inequality-LMI-and-SemiDefinite-Programming-SDP">3.1. Linear Matrix Inequality(LMI) and SemiDefinite Programming(SDP)</h2>
       
     </div>
 
@@ -390,7 +411,7 @@ tr(AB)=tr(PP^TQQ^T)=tr(Q^TPP^TQ)=tr(P^TQ)^2=\|P^TQ\|_F^2=0\\
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-05-20 20:32:27" itemprop="dateModified" datetime="2025-05-20T20:32:27-07:00">2025-05-20</time>
+      <time title="Modified: 2025-05-22 14:28:45" itemprop="dateModified" datetime="2025-05-22T14:28:45-07:00">2025-05-22</time>
     </span>
 
   
