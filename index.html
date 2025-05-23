@@ -274,7 +274,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-05-22 14:54:28" itemprop="dateModified" datetime="2025-05-22T14:54:28-07:00">2025-05-22</time>
+      <time title="Modified: 2025-05-23 00:26:51" itemprop="dateModified" datetime="2025-05-23T00:26:51-07:00">2025-05-23</time>
     </span>
 
   
@@ -312,7 +312,11 @@ The following inequality holds for each entry:
 
 <hr>
 <h1 id="Cone">2. Cone</h1><p><strong>Definition:</strong> A set $\mathcal{K}$ is called <span style="color:red"> cone </span> if for all $x\in \mathcal{K},\theta\geq 0$, it holds that<br>\begin{gather*}<br>    \theta x\in \mathcal{K}<br>\end{gather*}</p>
-<p><strong>Definition:</strong> Let $\mathcal{K}$ be a cone, the <span style="color:red">dual cone $\mathcal{K}^*$</span> is<br>\begin{gather*}<br>   \mathcal{K}^*:= \left\{y\mid x^Ty\geq 0, \forall x\in\mathcal{K}\right\}<br>\end{gather*}</p>
+<p><strong>Definition:</strong> Let $\mathcal{K}$ be a cone, the <span style="color:red">dual cone $\mathcal{K}^*$</span> is<br>\begin{gather*}<br>   \mathcal{K}^*:= \left\{y\mid \langle x,y\rangle \geq 0, \forall x\in\mathcal{K}\right\}<br>\end{gather*}</p>
+<p><strong>Definition:</strong> Let $\mathcal{K}$ be a cone, the <span style="color:red">polar cone $\mathcal{K}^o$</span> is<br>\begin{gather*}<br>   \mathcal{K}^o:= \left\{y\mid \langle x,y\rangle \leq 0, \forall x\in\mathcal{K}\right\}<br>\end{gather*}</p>
+<p>Apparently, by the definition, $\mathcal{K}^o=-\mathcal{K}^*$.</p>
+<p><strong>Definition:</strong> Let $C$ be a set, for any $x\in C$ the <span style="color:red">normal cone $\mathcal{N}_C(x)$</span> at this point is:<br>\begin{gather*}<br>   \mathcal{N}_C(x):= \left\{y\mid \langle y,c-x\rangle\leq 0, \forall c\in\mathcal{K}\right\}<br>\end{gather*}</p>
+<hr>
 <fieldset>
 <strong><i>
 Lemma:
@@ -331,6 +335,31 @@ c^Tx < 0.
 From the first relation, it holds that $c\in \mathcal{K}^*$. However, the second relation indicates that such $x\notin \mathcal{K}^{**}$ which contradicts the assumption. Therefore $\mathcal{K}^{**}=\mathcal{K}$. 
 </details>
 
+<hr>
+<fieldset>
+<strong><i>
+Lemma:
+</i> The normal cone for a cone $\mathcal{K}$ is:
+\begin{gather*}
+\mathcal{N}_{\mathcal{K}} (x)=\left\{
+    \begin{array}{lc}
+        \left\{y\mid\langle y,x \rangle=0\right\}&x\in \mathcal{K}\\
+        \phi&x\notin \mathcal{K}
+    \end{array}
+    \right.
+\end{gather*}
+</strong>
+</fieldset>
+
+<details closed>
+<summary>Proof</summary>
+We only need to show that there does not exists such $y\in\mathcal{N}_{\mathcal{K}}$ that $\langle y,x\rangle < 0$. Suppose there exists, then for $x\in \mathcal{K}$, 
+
+$$
+\langle y, \frac{1}{2}x - x\rangle=\langle y, -\frac{1}{2}x \rangle > 0
+$$
+which contradicts the definition of the normal cone, as $\frac{1}{2}x\in \mathcal{K}$.
+</details>
 
 <h1 id="Positive-Definite-Matrix">3. Positive Definite Matrix</h1><fieldset>
 <strong><i>Lemma:</i></strong> Given $A\succeq 0,B\succeq 0$, $AB=0$ iff. $tr(AB)=0$.
